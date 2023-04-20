@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,7 +12,7 @@ body {
   text-align: right;
 }
 
-.header img {
+.header .img {
   width: 100%;
 }
 
@@ -42,22 +42,22 @@ body {
   display: flex;
 }
 
-ul {
+.task__list {
   margin: 0;
   padding: 0px;
 }
 
-li,
-h3 {
+.task__list-item,
+.task__title {
   list-style: none;
 }
 
-input,
-button {
+.task__input,
+.button {
   outline: none;
 }
 
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -67,13 +67,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-h3,
-label[for="new-task"] {
+.task__title,
+.task__label[for="new-task"] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -83,7 +83,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task__input[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -96,22 +96,22 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task__input[type="text"]:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.task__label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+.task__input.task__input_new {
   width: 318px;
 }
 
 /* Task list */
-li {
+.task__list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -121,50 +121,50 @@ li {
   align-items: center;
 }
 
-li>* {
+.task__list-item>* {
   vertical-align: middle;
 }
 
-li>input[type="checkbox"] {
+.task__list-item>.task__input[type="checkbox"] {
   margin: 0 10px;
 }
 
-li>label {
+.task__list-item>.task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li>input[type="text"] {
+.task__list-item>.task__input[type="text"] {
   width: 226px
 }
 
-button.task__delete-button img {
+.button.task__delete-button .img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.task__delete-button img:hover {
+.button.task__delete-button .img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+.task__list#completed-tasks .task__label {
   text-decoration: line-through color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.task__list .task__list-item .task__input[type=text] {
   display: none
 }
 
-ul li.task__list-item_editable input[type=text] {
+.task__list .task__list-item.task__list-item_editable .task__input[type=text] {
   display: inline-block;
   width: 224px
 }
 
-ul li.task__list-item_editable label {
+.task__list .task__list-item.task__list-item_editable .task__label {
   display: none;
 }
